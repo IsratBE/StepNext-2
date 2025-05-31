@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>StepUp - Digital Excellence</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ceo design.css">
+  <link rel="stylesheet" href="mobile.css">
+  
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .hero-section {
+      background: rgba(0, 0, 0,.6);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 30px 0;
+      text-align: center;
+
+
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .hero-content h2 {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #00e6e6;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+  
+
+ .navbar-dark .navbar-brand {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color:white;
+    }
+
+    .nav-link {
+      font-size: 18px;
+      color: aliceblue;
+    }
+
+   
+    .navbar{
+      background-color:#272727;
+    }
+
+    .navbar::after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+    }
+
+    .form-control::placeholder {
+      color: #ccc;
+    }
+
+    .form-control:focus {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+    }
+
+    .info-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 25px;
+      margin-top: 20px;
+      transition: transform 0.3s ease-in-out;
+      text-align: center;
+    }
+
+    .info-card:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .info-card h3 {
+      font-size: 2rem;
+      color: #00f5c4;
+    }
+
+    .info-card p {
+      font-size: 1rem;
+      color: #eee;
+    }
+
+    .btn-outline-light:hover {
+      background-color: #00e6e6;
+      color: #000;
+    }
+    /* Make navbar compact on desktop */
+@media (min-width: 992px) {
+  .navbar-brand img {
+    height: 48px !important;  /* Reduce logo height */
+    max-width: 160px;
+  }
+  .navbar {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .navbar-nav .nav-link,
+  .navbar-toggler {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* On small devices, keep logo larger if you want */
+@media (max-width: 991.98px) {
+  .navbar-brand img {
+    height: 80px;
+    max-width: 180px;
+  }
+}
+
+/* Make section images look good on desktop and responsive on mobile */
+.section img,
+.seo-img,
+.strategic-img,
+.diamond img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  /* Add a sensible max-width for desktop */
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 992px) {
+  .section .row {
+    align-items: center;
+  }
+  .section img,
+  .seo-img,
+  .strategic-img,
+  .diamond img {
+    max-width: 80%; /* or 400-500px, adjust as needed */
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: 0; /* right-align in col-lg-6 */
+  }
+  .section .image-box,
+  .section .text-center {
+    text-align: right;
+  }
+}
+@media (max-width: 991.98px) {
+  .section img,
+  .seo-img,
+  .strategic-img,
+  .diamond img {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+    /* Responsive improvements for mobile devices */
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    height: auto;
+    padding: 40px 0;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .seo-section, .section, .team-section, .testimonial-section, .trust-section {
+    padding: 35px 0 !important;
+  }
+  .strategic-img, .seo-img, .img-fluid, .diamond img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .diamond, .diamond img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  .btn-view-more, .btn, .btn-outline-light, .btn-primary {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+  .card-title {
+    font-size: 1rem;
+  }
+  .card-body {
+    padding: 1rem;
+  }
+  .team-img {
+    height: 150px !important;
+  }
+  .footer-logo h4 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section, .seo-section, .section, .team-section, .testimonial-section, .trust-section {
+    padding: 20px 0 !important;
+  }
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+  .hero-content h2 {
+    font-size: 1rem;
+  }
+  .info-card h3 {
+    font-size: 1.4rem;
+  }
+  .strategic-img, .seo-img, .img-fluid, .diamond img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100vw;
+  }
+  .diamond, .diamond img {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .team-img {
+    height: 100px !important;
+  }
+  .footer-logo h4 {
+    font-size: 1rem;
+  }
+  .navbar-brand img {
+    height: 60px !important;
+  }
+}
+
+/* Ensure all images scale fluidly */
+img, .img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+   
+
+    /* Services section */
+    .card-title {
+      font-weight: 600;
+      color: #203a43;
+    }
+    .card-body{
+      background-color: #ccc;
+      transition: transform 0.3s ease-in-out;
+
+    }
+    .card-body:hover{
+      background-color:#c2d5dd;
+      border-radius: 10px;
+      transform: translateY(-5px);
+
+    }
+    
+    .seo-img{
+    transition: transform 0.3s ease-in-out;
+  }
+  .seo-img:hover{
+    transform: translateY(-15px);
+    font-size: 5%;
+  }
+
+  
+  /* strategic marketing */
+  .strategic-img{
+height: 400px;
+width: 480px;
+transition: transform 0.3s ease-in-out;
+}
+
+.strategic-img:hover{
+  border-radius: 20px;
+  transform: translateY(-20px);
+
+}
+
+
+  /* Team section */
+
+  .team-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #eaf4ff 0%, #ffffff 100%);
+  }
+
+  .team-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: #0f172a;
+  }
+
+  .team-card {
+    background: #f1f4f6;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  }
+
+  .team-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  }
+
+  .team-info {
+    padding: 20px;
+    background-color:#758bba;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .team-info h5 {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #0f172a;
+  }
+
+  .team-info p {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  .social-icons {
+    text-align: center;
+    padding: 15px 0 25px;
+    color: #080808;
+  }
+
+  .social-icons a {
+    color: #080808;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    color: #2563eb;
+  }
+
+  @media (max-width: 576px) {
+    .team-img {
+      height: 250px;
+    }
+  }
+  /* clint review */
+  .testimonial-section {
+      padding: 90px 0;
+      background: #ffffff;
+    }
+
+    .testimonial-title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #1e293b;
+      margin-bottom: 60px;
+    }
+
+    .testimonial-card {
+      border: none;
+      border-radius: 12px;
+      padding: 30px;
+      background-color: #f1f5f9;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .testimonial-card:hover {
+      background-color: #a6b9d1;
+      transform: translateY(-5px);
+    }
+
+    .quote-icon {
+      font-size: 35px;
+      color: #2563eb;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: #334155;
+      margin: 20px 0;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      margin-top: 25px;
+    }
+
+    .reviewer-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 10px; /* rectangular-rounded */
+      margin-right: 15px;
+    }
+
+    .reviewer-name {
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .reviewer-role {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    .rating-stars {
+      color: #facc15; /* yellow-400 */
+      font-size: 1.1rem;
+    }
+
+    /* Partners */
+    .trust-section {
+      background: linear-gradient(to right, #f0f4ff, #ffffff);
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .trust-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a237e;
+    }
+
+    .trust-subtitle {
+      color: #5f6368;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+    }
+
+    .logo-box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      padding: 25px 20px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .logo-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .logo-box img {
+      max-width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .logo-box p {
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .btn-view-more {
+      margin-top: 50px;
+      background-color: #1a237e;
+      color: white;
+      padding: 10px 30px;
+      border-radius: 8px;
+      transition: 0.3s;
+      font-weight: 500;
+    }
+
+    .btn-view-more:hover {
+      background-color: #0d155e;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .trust-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* form */
+
+    .left-section {
+            background-color: #003366; /* Deep Navy */
+            color: #ffffff;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh; /* Full viewport height */
+        }
+
+        .left-section h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .left-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00cc99; /* Teal Accent */
+            margin-bottom: 30px;
+        }
+
+        .left-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .left-section .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .left-section .feature-list li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .left-section .feature-list li i {
+            color: #00cc99; /* Teal Accent */
+            margin-right: 10px;
+        }
+
+        .right-section {
+            background-color: #ffffff; /* White */
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-section h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #343a40; /* Dark text */
+            margin-bottom: 40px;
+        }
+
+        .form-control {
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 1rem 0.75rem;
+            margin-bottom: 20px;
+            border-color: #ced4da;
+        }
+
+        .form-control:focus {
+            border-color: #00cc99; /* Teal accent on focus */
+            box-shadow: 0 0 0 0.25rem rgba(0, 204, 153, 0.25);
+        }
+
+        .form-select {
+             border-radius: 0.5rem; /* Rounded corners */
+             padding: 1rem 2.25rem 1rem 0.75rem; /* Adjust padding for arrow */
+             margin-bottom: 20px;
+             border-color: #ced4da;
+        }
+
+         .form-select:focus {
+            border-color: #00cc99; /* Teal accent on focus */
+            box-shadow: 0 0 0 0.25rem rgba(0, 204, 153, 0.25);
+        }
+
+
+        .btn-primary {
+            background-color: #00cc99; /* Teal Accent */
+            border-color: #00cc99; /* Teal Accent */
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border-radius: 0.5rem; /* Rounded corners */
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #00a377; /* Darker Teal */
+            border-color: #00a377;
+        }
+
+        .form-check-label {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991.98px) {
+            .left-section, .right-section {
+                padding: 40px 20px;
+                min-height: auto; /* Remove min-height on smaller screens */
+            }
+
+            .left-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .left-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .right-section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* footer section */
+
+        .footer {
+      background-color: #1e293b;
+      padding: 60px 30px;
+      position: relative;
+    }
+
+    .footer-logo h4 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #3b82f6;
+    }
+
+    .footer p, .footer a {
+      font-size: 14px;
+      color: #94a3b8;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      color: #3b82f6;
+    }
+
+    .social-icons a {
+      color: #94a3b8;
+      margin-right: 12px;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #3b82f6;
+    }
+
+    .map-container {
+      height: 100%;
+      min-height: 250px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #334155;
+      padding-top: 10px;
+      margin-top: 20px;
+      color: #b0b5bb;
+      font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .map-container {
+        margin-top: 30px;
+        height: 250px;
+      }
+    }
+  
+  
+  
+
+
+  
+  
+    
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark py-3">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="image/logo-transparent.png" alt="StepUp Logo" height="120"/>
+    STEP NEXT | Digital Marketing Agency
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-4">
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Our Story</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
+      <a class="text-info fw-bold" href="tel:+088 1910 800444"><i class="fa-solid fa-phone"></i> +880 1910 800444</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container hero-content">
+    <h2>Elevate Your Online Presence</h2>
+    <h1>Creative. Data-Driven. Limitless.</h1>
+    <p>Empowering brands through strategic marketing and stunning design.</p>
+
+    <!-- Form -->
+    <form class="glass-form row g-3 text-start justify-content-center">
+      <div class="col-12 col-md-4">
+        <label class="form-label text-white">&#129489; Full Name</label>
+        <input type="text" class="form-control" placeholder="Enter Your Name here" />
+      </div>
+      <div class="col-12 col-md-4">
+        <label class="form-label text-white">&#128231; Email Address</label>
+        <input type="email" class="form-control" placeholder="you@example.com" />
+      </div>
+      <div class="col-12 col-md-4">
+        <label class="form-label text-white">&#128222; Phone Number</label>
+        <input type="tel" class="form-control" placeholder="+880" />
+      </div>
+      <div class="col-12 text-center">
+        <button class="btn btn-outline-light px-5 mt-3">Start Now</button>
+      </div>
+    </form>
+
+    <!-- Info Cards -->
+    <div class="row mt-4">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="info-card">
+          <h3>2500+</h3>
+          <p>Successful Campaigns</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4">
+        <div class="info-card">
+          <h3>120+</h3>
+          <p>Expert Team Members</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mx-auto">
+        <div class="info-card">
+          <h3>80+</h3>
+          <p>Brands Transformed</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+
+ <!-- SEO Section -->
+ <section class="seo-section" style="background-color:#c2d5dd;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Section -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h2>Why you choose Step Next?</h2>
+        <p>At StepNext, we don’t just build websites or digital tools – we build smart solutions that take your brand to the next level.</p>
+        <p>We specialize in creating modern, results-driven digital experiences tailored for growth-focused businesses. Whether it’s web design, digital marketing, or software development – our team is passionate about turning your vision into a powerful digital reality.</p>
+        <p>With a customer-first approach, we blend creativity with technology to deliver performance that matters.Your success is our mission. Let StepNext be the next step in your journey to digital excellence."</p>
+      </div>
+
+      <!-- Diamond Image Grid -->
+      <div class="col-lg-6">
+        <div class="diamond-grid">
+          <div class="diamond"><img src="image/ceo pic 2.jpg" alt="img1"></div>
+          
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<hr>
+
+<!-- Services Section -->
+<section class="py-5" style="background-color: #f1f4f6;">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <h6 class="text-uppercase text-secondary fw-semibold">
+        <i class="fas fa-briefcase me-2 text-dark"></i> Our Expertise
+      </h6>
+      <h2 class="fw-bold display-5" style="color: #203a43;">
+        Best <span class="text-primary">Services</span> We Can Offer You!
+      </h2>
+      <p class="text-muted mt-3">Empowering your brand with the right strategies, design, and digital growth.</p>
+    </div>
+
+    <!-- Cards -->
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-bullhorn fa-lg"></i>
+              </div>
+              <div><h5 class="card-title">01. Campaign Design</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Execute powerful online-offline campaigns with creative flair and strategic insight.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-network-wired fa-lg"></i>
+              </div>
+              <div><h5 class="card-title">02. Digital Presence</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              From websites to social media, we help you thrive in the digital world.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-chalkboard-teacher fa-lg"></i>
+              </div>
+              <div><h5 class="card-title">03.Video & Photo Editing</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Upskill your team with customized workshops and expert-led training programs.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-search fa-lg"></i>
+              </div>
+              <div><h5 class="card-title">04. Strategy & Research</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Build smarter decisions through market research and strategic insights.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-globe fa-lg"></i>
+              </div>
+              <div><h5 class="card-title">05. Web Design & Developer</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Build smarter decisions through market research and strategic insights.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-phone-volume fa-lg"></i>              </div>
+              <div><h5 class="card-title">06. Telemarketing</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Build smarter decisions through market research and strategic insights.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-house-signal fa-lg"></i>              </div>
+              <div><h5 class="card-title">07. SEO & Digital Marketing</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Build smarter decisions through market research and strategic insights.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="bg-dark text-white rounded p-2 me-3">
+                <i class="fas fa-file-circle-question fa-lg"></i>              </div>
+              <div><h5 class="card-title">08.Content Solution</h5></div>
+            </div>
+            <p class="card-text small text-muted">
+              Build smarter decisions through market research and strategic insights.
+            </p>
+            <a href="#" class="text-primary fw-bold">READ MORE →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!--Seo Expert-->
+<section class="section" style="background-color: #c2d5dd;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Text Content -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="fw-bold text-black">Boost Your Online Presence<br> with <span class="highlight">Top-Rated SEO Experts</span></h1>
+        <p class="text-muted mt-3">Ready to dominate search engine rankings? Our team of experienced SEO strategists is here to help your website stand out in the digital crowd. Join countless brands growing faster with smart, data-driven optimization.</p>
+
+        <div class="feature">
+          <div class="feature-icon bg-primary">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Strategic SEO Planning</h5>
+            <p class="text-muted mb-0">From technical SEO to content strategies, we build tailored plans for sustainable growth.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon bg-danger">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">High-Impact Content</h5>
+            <p class="text-muted mb-0">Creative and optimized content that not only ranks but converts visitors into customers.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon bg-dark">
+            <i class="fa-solid fa-globe-wifi"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Global & Local Reach</h5>
+            <p class="text-muted mb-0">Whether you're targeting a city or the entire world, our SEO tools adapt to your goals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center image-box">
+        <img class="seo-img"  src="image/seo pic.jpg" alt="SEO Illustration">
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!--Digital marketing-->
+<section class="section" style="background-color: #f1f4f6;">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Image Left -->
+      <div class="col-lg-6 text-center mb-4 mb-lg-0">
+        <img src="image/photo edit pic.png" alt="Digital Marketing" class="img-fluid rounded">
+      </div>
+
+      <!-- Text Right -->
+      <div class="col-lg-6">
+        <h1 class="fw-bold text-black">Unlock Growth with <span class="highlight">Digital Marketing</span></h1>
+        <p class="text-muted mt-3">
+          Expand your reach and boost sales with tailored digital marketing strategies designed to connect with your audience and drive conversions.
+        </p>
+
+        <div class="feature">
+          <div class="feature-icon bg-success">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Social Media Advertising</h5>
+            <p class="text-muted mb-0">Promote your brand where your audience lives — Facebook, Instagram, and more.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon bg-warning">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Conversion Optimization</h5>
+            <p class="text-muted mb-0">Boost ROI with targeted campaigns and performance tracking.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon bg-info">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Email Marketing & Video photo Editing</h5>
+            <p class="text-muted mb-0">Build relationships with powerful email automation and personalized campaigns.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+
+<!--strategic Marketing-->
+<section class="section py-5" style="background-color: #c2d5dd;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Left -->
+      <div class="col-lg-6 order-2 order-lg-1">
+        <h1 class="fw-bold text-black">Drive Results with <span class="text-primary">Strategic Marketing</span></h1>
+        <p class="text-muted mt-3">
+          Our integrated approach blends analytics with creativity to build marketing systems that grow with your business.
+        </p>
+
+        <div class="feature d-flex mb-4">
+          <div class="feature-icon bg-primary text-white me-3 p-3 rounded-circle">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Data-Driven Insights</h5>
+            <p class="text-muted mb-0">Leverage real-time analytics to make smarter, faster marketing decisions.</p>
+          </div>
+        </div>
+
+        <div class="feature d-flex mb-4">
+          <div class="feature-icon bg-danger text-white me-3 p-3 rounded-circle">
+            <i class="fa-solid fa-palette"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Brand Identity</h5>
+            <p class="text-muted mb-0">Craft a visual and verbal identity that resonates across all channels.</p>
+          </div>
+        </div>
+
+        <div class="feature d-flex">
+          <div class="feature-icon bg-secondary text-white me-3 p-3 rounded-circle">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div>
+            <h5 class="fw-bold text-black">Content Strategy</h5>
+            <p class="text-muted mb-0">Develop meaningful content that informs, entertains, and converts.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Right -->
+      <div class="col-lg-6 order-1 order-lg-2 text-center mb-4 mb-lg-0">
+        <img class="strategic-img" src="image/marketing.jpg" alt="Marketing Strategy" class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+<br>
+
+<!--How stepNext fuels-->
+<section class="py-5 " style="background-color: #f1f4f6;">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-3 text-black">How Step Next Fuels Your Digital Growth</h2>
+    <p class=" mb-5 text-black">
+      Every successful campaign starts with a strategy. At StepNext, we build smart, scalable, and data-driven marketing blueprints to help you grow with confidence.
+    </p>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 p-4 text-start">
+          <div class="d-flex align-items-start mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/456/456212.png" alt="Icon" class="icon me-3">
+            <div>
+              <h5 class="fw-bold">Vision Alignment</h5>
+              <p class="text-muted mb-0">
+                We start by diving deep into your brand goals, aligning every move with your long-term vision and audience needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 p-4 text-start">
+          <div class="d-flex align-items-start mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/3304/3304569.png" alt="Icon" class="icon me-3">
+            <div>
+              <h5 class="fw-bold">Insight-Driven SEO</h5>
+              <p class="text-muted mb-0">
+                With a blend of analytics and industry trends, we craft SEO strategies that are smart, scalable, and sustainable.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 p-4 text-start">
+          <div class="d-flex align-items-start mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828970.png" alt="Icon" class="icon me-3">
+            <div>
+              <h5 class="fw-bold">Custom Growth Roadmap</h5>
+              <p class="text-muted mb-0">
+                Your digital roadmap evolves with you — flexible, transparent steps to measure, test, and scale what works.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm border-0 p-4 text-start">
+          <div class="d-flex align-items-start mb-3">
+            <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Icon" class="icon me-3">
+            <div>
+              <h5 class="fw-bold">Quality First Delivery</h5>
+              <p class="text-muted mb-0">
+                We deliver excellence with every milestone — clear documentation, performance reports, and top-tier results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+<div class="col-md-6">
+  <div class="card h-100 shadow-sm border-0 p-4 text-start">
+    <div class="d-flex align-items-start mb-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/943/943746.png" alt="Icon" class="icon me-3">
+      <div>
+        <h5 class="fw-bold">Omnichannel Planning</h5>
+        <p class="text-muted mb-0">
+          We map out your customer journey across channels, ensuring your message lands consistently whether it’s social, email, or search.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Card 6 -->
+<div class="col-md-6">
+  <div class="card h-100 shadow-sm border-0 p-4 text-start">
+    <div class="d-flex align-items-start mb-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/3208/3208707.png" alt="Icon" class="icon me-3">
+      <div>
+        <h5 class="fw-bold">Performance Optimization</h5>
+        <p class="text-muted mb-0">
+          Using real-time data, we refine strategies on the go—enhancing ROI, lowering costs, and scaling what delivers real results.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+<br>
+
+<!--CEO section-->
+<section class="ceo-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- CEO Image -->
+      <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+        <img src="image/ceo pic.jpg" alt="CEO" class="img-fluid ceo-image">
+      </div>
+
+      <!-- CEO Info -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="mb-3">Meet Our Visionary Leader</h2>
+        <p class="text-muted mb-4">
+          “At StepNext, we don't just follow trends — we create them. I believe in empowering our clients through innovative marketing strategies that lead to real, lasting growth.”
+        </p>
+        <h5 class="fw-bold text-black">Abu Jar Gifary</h5>
+        <p class="text-muted">Founder & CEO, Step Next</p>
+
+        <div class="mt-3">
+          <a href="#" class="btn btn-outline-primary btn-sm me-2">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:rayhan@example.com" class="btn btn-outline-dark btn-sm">
+            <i class="fa-solid fa-envelope"></i> Contact
+          </a>
+          <a href="https://www.facebook.com/stepnextbd?mibextid=ZbWKwL" class="btn btn-outline-dark btn-sm me-2">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a href="#" class="btn btn-outline-dark btn-sm me-2">
+            <i class="fa-brands fa-square-instagram"></i> Instagram
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- CEO Section End -->
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<br>
+
+<!--team details-->
+<section class="team-section">
+  <div class="container">
+    <h2 class="team-title">Meet Our Creative Team</h2>
+    <div class="row g-4">
+
+      <!-- Team Member -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-card">
+          <img src="image/team mem-4.jpeg" alt="Team Member" class="team-img">
+          <div class="team-info">
+            <h5>Rayhan Islam</h5>
+            <p style="color:black;">Founder & CEO</p>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- More members -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-card">
+          <img src="image/team mem-1.jpg" alt="Team Member" class="team-img">
+          <div class="team-info">
+            <h5>Sarah Akter</h5>
+            <p style="color:black;">Chief Marketing Officer</p>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-card">
+          <img src="image/team mem-2.jpeg" alt="Team Member" class="team-img">
+          <div class="team-info">
+            <h5 >Tanvir Rahman</h5>
+            <p style="color:black;">Tech Lead</p>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="team-card">
+          <img src="image/team mem-3.jpeg" alt="Team Member" class="team-img">
+          <div class="team-info">
+            <h5>Nazmun Nahar</h5>
+            <p style="color:black;">Creative Director</p>
+          </div>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-dribbble"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- JS for AOS Animation -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<br>
+<!--client section-->
+<section class="testimonial-section" style="background-color:#ede7e7">
+  <div class="container">
+    <h2 class="testimonial-title">Client Voices</h2>
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">“Their digital expertise took our visibility to the next level. We saw real results faster than expected.”</p>
+          <div class="rating-stars mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="reviewer-img">
+            <div>
+              <div class="reviewer-name">Adeel Rahman</div>
+              <div class="reviewer-role">CMO, BrightGrid</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">“Working with them was seamless and effective. Our brand awareness has skyrocketed!”</p>
+          <div class="rating-stars mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Client" class="reviewer-img">
+            <div>
+              <div class="reviewer-name">Natalie Greene</div>
+              <div class="reviewer-role">Founder, PureNest</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <div class="testimonial-card">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="testimonial-text">“Professional, creative, and fast-moving. Their team exceeded our expectations.”</p>
+          <div class="rating-stars mb-2">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <div class="reviewer">
+            <img src="https://randomuser.me/api/portraits/men/29.jpg" alt="Client" class="reviewer-img">
+            <div>
+              <div class="reviewer-name">Thomas Yeo</div>
+              <div class="reviewer-role">CTO, CloudCore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+ 
+   <!-- Single Centered Read More Button -->
+   <div class="text-center mt-5">
+    <a href="#" class="btn btn-primary px-4 py-2">Read More Reviews</a>
+  </div>
+</div>
+</section>
+<br>
+
+<!--Partners-->
+<section class="trust-section"  style="background-color: #f1f4f6;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="trust-title">Why 300+ Companies Rely on Us</h2>
+      <p class="trust-subtitle">We’re trusted by leading brands across industries to deliver reliable, innovative solutions that fuel growth and impact.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-1.jpg" alt="Logo 1">
+          <p style="color: #0f172a;">Quick Pro</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-2.jpg" alt="Logo 2">
+          <p style="color: #0f172a;">Peninsula</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-3.jpg" alt="Logo 3">
+          <p style="color: #0f172a;">ANS Group</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-4.jpg" alt="Logo 4">
+          <p style="color: #0f172a;">Adib Trade</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-5.jpg" alt="Logo 5">
+          <p style="color: #0f172a;">HB Logistics</p>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="logo-box">
+          <img src="image/com-6.jpg" alt="Logo 6">
+          <p style="color: #0f172a;">Vega Marine</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <a href="#" class="btn btn-view-more mt-4">View All Partners</a>
+    </div>
+  </div>
+</section>
+<br>
+<!--Form section-->
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-lg-6 left-section">
+          <div class="text-center text-lg-start">
+              <h2>Let's Empower Your Journey</h2>
+              <h1>Unlock Your Potential</h1>
+              <p>We collaborate with forward-thinking businesses to navigate challenges and seize opportunities. Our tailored strategies and innovative solutions are designed to propel you towards sustainable growth and unparalleled success.</p>
+              <ul class="feature-list">
+                  <li><i class="bi bi-check-circle-fill"></i> Strategic Consulting</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Innovative Solutions</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Dedicated Partnership</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Measurable Results</li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="col-lg-6 right-section">
+          <h2>Let's Connect and Discuss Your Vision</h2>
+          <form>
+              <div class="row">
+                  <div class="col-md-6">
+                      <input type="text" class="form-control" placeholder="Your Name" aria-label="Your Name">
+                  </div>
+                  <div class="col-md-6">
+                      <input type="email" class="form-control" placeholder="Your Email" aria-label="Your Email">
+                  </div>
+              </div>
+               <div class="row">
+                  <div class="col-md-6">
+                      <input type="text" class="form-control" placeholder="Company Name" aria-label="Company Name">
+                  </div>
+                  <div class="col-md-6">
+                      <input type="text" class="form-control" placeholder="Work Phone (Optional)" aria-label="Work Phone">
+                  </div>
+              </div>
+
+
+              <select class="form-select" aria-label="Select Service">
+                  <option selected>Select Service of Interest</option>
+                  <option value="1">Consulting</option>
+                  <option value="2">Solution Development</option>
+                  <option value="3">Strategy Planning</option>
+                  <option value="4">Other</option>
+              </select>
+
+              <textarea class="form-control" placeholder="Tell us about your project or inquiry..." rows="5"></textarea>
+
+              <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" value="" id="marketingOptIn">
+                  <label class="form-check-label" for="marketingOptIn">
+                      Yes, I'd like to receive occasional updates and insights. <a href="#" class="text-decoration-none">View privacy policy.</a>
+                  </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">Send Message</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<hr>
+
+<!--footer section-->
+
+<footer class="footer bg-black">
+  <div class="container">
+    <div class="row g-5">
+      
+      <!-- Left Side -->
+      <div class="col-lg-7">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="footer-logo mb-3">
+              <h4>Step Next</h4>
+            </div>
+            <p>Step Next is your partner in digital transformation. We create powerful web experiences to help your business grow and thrive in the digital era.</p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <h5 class="mb-3 text-white">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+
+            <h5 class="mt-4 mb-2 text-white">Contact</h5>
+            <p><i class="fas fa-envelope me-2"></i> info@stepnext.com</p>
+            <p><i class="fas fa-phone me-2"></i> +0880 1910 800333</p>
+            <p><i class="fas fa-phone me-2"></i> +0880 1910 800444</p>
+            <p><i class="fas fa-map-marker-alt me-2"></i> Dhaka, Bangladesh</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Map -->
+      <div class="col-lg-5">
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.904187859152!2d90.3915027751077!3d23.75087688886766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9bd305e3055%3A0xd48f7d3770570c12!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1681111122333!5m2!1sen!2sbd"
+                  width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom mt-5 text-bold">
+      &copy; 2025 Step Next. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
